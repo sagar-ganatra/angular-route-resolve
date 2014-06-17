@@ -13,8 +13,8 @@ window.app.config([
                 templateUrl: 'partials/search.html',
                 controller: 'searchController',
                 resolve: {
-                    searchResults: ['$route', 'searchService', function ($route, searchService){
-                      return searchService.getSearchResults($route.current.params);
+                    searchResults: ['$route', 'searchService', function ($route, searchService) {
+                        return searchService.getSearchResults($route.current.params);
                     }]
                 }
             });

@@ -1,4 +1,3 @@
-
 //var app = angular.module('routeResolve', []);
 app.controller('homeController', [
     '$scope', '$location',
@@ -7,9 +6,9 @@ app.controller('homeController', [
         $scope.searchString = '';
 
         $scope.doSearch = function ($event) {
-            if($event.keyCode === 13) {
+            if ($event.keyCode === 13) {
                 $location.path('/search/' + $scope.searchString);
             }
-        }
+        };
     }
 ]);
