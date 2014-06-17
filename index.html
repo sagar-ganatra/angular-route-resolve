@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" ng-app="routeResolve">
+<head>
+    <meta charset="utf-8">
+    <title>Resolve route</title>
+    <style>
+        table, td, th {
+            border: 1px solid #000;
+            text-align: left;
+        }
+    </style>
+    
+</head>
+<body>
+<div class="main-content">
+    <form ng-controller="homeController">
+        <input type="search"
+               placeholder="Search..."
+               name="searchText"
+               ng-model="searchString"
+               ng-keyup="doSearch($event)"/>
+
+    </form>
+    <div ng-view></div>
+</div>
+
+
+<script src="js/vendor/angular.js"></script>
+<script src="js/vendor/angular-route.js"></script>
+<script src="js/vendor/angular-mocks.js"></script>
+<script src="js/app.js"></script>
+<script src="js/homeController.js"></script>
+<script src="js/searchController.js"></script>
+<script src="js/searchService.js"></script>
+<script src="mocks/searchServiceMock.js"></script>
+</body>
+</html>
